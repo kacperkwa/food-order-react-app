@@ -1,6 +1,6 @@
 import classes from './HeaderCardButton.module.css';
 import CartIcon from '../Cart/CartIcon';
-const HeaderCardButton = props => {
+const HeaderCartButton = props => {
 	return (
 		<button className={classes.button}>
 			<span className={classes.icon}>
@@ -11,4 +11,4 @@ const HeaderCardButton = props => {
 		</button>
 	);
 };
-export default HeaderCardButton;
+export default HeaderCartButton;
