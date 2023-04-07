@@ -1,7 +1,8 @@
-import { Fragment, useState } from 'react';
+import { useState } from 'react';
 import Cart from './components/Cart/Cart';
 import Header from './components/Layout/Header';
 import Meals from './components/Meals/Meals';
+import CartProvider from './store/CartProvider';
 
 function App(props) {
 	const [isVisible, setIsVisible] = useState(false);
@@ -9,13 +10,13 @@ function App(props) {
 		setIsVisible(!isVisible);
 	};
 	return (
-		<Fragment>
+		<CartProvider>
 			{isVisible && <Cart onClick={modalCartHandler} />}
 			<Header onClick={modalCartHandler} />
 			<main>
 				<Meals />
 			</main>
-		</Fragment>
+		</CartProvider>
 	);
 }
 
